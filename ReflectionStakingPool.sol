@@ -191,7 +191,7 @@ contract ReflectionStakingPool is Ownable, ReentrancyGuard {
 
         // Add user to EnumerableSet and track sent tokens
         userSet.add(msg.sender);
-        stakedBalances[msg.sender] = stakedTokens;
+        stakedBalances[msg.sender] = stakedBalances[msg.sender].add(stakedTokens);
     }
 
     // Function to withdraw any staked and accumulated tokens from the pool.
