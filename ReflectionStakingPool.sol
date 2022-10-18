@@ -89,6 +89,10 @@ contract ReflectionStakingPool is Ownable, ReentrancyGuard {
     function setTokenToSell(address _token) external onlyOwner {
         tokenToSell = _token;
     }
+    
+    function setTokenToBuy(address _token) external onlyOwner {
+        tokenToBuy = _token;
+    }
 
     /* Function to convert sellable tokens in contract
        into the main staking token.
